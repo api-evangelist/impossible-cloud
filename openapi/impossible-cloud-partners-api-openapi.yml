@@ -1,0 +1,249 @@
+swagger: '2.0'
+info:
+  contact: {}
+  description: 'Public API designed to help our partners to automate their tasks.
+
+    Log in to Management Console, create API Key for your automation or reporting process and provide it in "Authorization" header per every request.'
+  title: Impossible Cloud Management Console public Distributors Partners API
+  version: '1.0'
+host: api.partner.impossiblecloud.com
+basePath: /v1
+schemes:
+- https
+tags:
+- name: Partners
+paths:
+  /storage-account:
+    post:
+      parameters:
+      - description: Storage account details
+        in: body
+        name: storageAccountDetails
+        required: true
+        schema:
+          $ref: '#/definitions/api.CreateStorageAccountReqBody'
+      responses:
+        '201':
+          description: Created
+          schema:
+            $ref: '#/definitions/api.StorageAccountResponse'
+      security:
+      - Bearer: []
+      summary: Create a storage account
+      tags:
+      - Partners
+  /storage-account/list:
+    get:
+      responses:
+        '200':
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/api.StorageAccountResponse'
+            type: array
+      security:
+      - Bearer: []
+      summary: Get list of available storage accounts
+      tags:
+      - Partners
+  /storage-account/{accountID}:
+    delete:
+      description: By default the storage account will be deleted in 30 days after scheduling.
+      parameters:
+      - description: Storage Account ID you can find in /storage-account/list
+        in: path
+        name: accountID
+        required: true
+        type: string
+      responses:
+        '204':
+          description: No Content
+      security:
+      - Bearer: []
+      summary: Schedule the deletion of a storage account
+      tags:
+      - Partners
+    get:
+      parameters:
+      - description: Storage Account ID you can find in /storage-account/list
+        in: path
+        name: accountID
+        required: true
+        type: string
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/api.StorageAccountResponse'
+      security:
+      - Bearer: []
+      summary: Get account info by accountID
+      tags:
+      - Partners
+    patch:
+      parameters:
+      - description: Storage Account ID you can find in /storage-account/list
+        in: path
+        name: accountID
+        required: true
+        type: string
+      - description: Storage account details
+        in: body
+        name: storageAccountDetails
+        required: true
+        schema:
+          $ref: '#/definitions/api.PatchStorageAccountReqBody'
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/api.StorageAccountResponse'
+      security:
+      - Bearer: []
+      summary: Update information of an account by accountID
+      tags:
+      - Partners
+  /storage-account/{accountID}/usage:
+    get:
+      parameters:
+      - description: Storage Account identifier
+        in: path
+        name: accountID
+        required: true
+        type: string
+      - description: Start of the timeframe from where the data should be shown
+        format: yyyy-mm-dd
+        in: query
+        name: from
+        required: true
+        type: string
+      - description: End of the timeframe from where the data should be shown
+        format: yyyy-mm-dd
+        in: query
+        name: to
+        required: true
+        type: string
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/api.ClientUsage'
+      security:
+      - Bearer: []
+      summary: Retrieves the usage of the storage account
+      tags:
+      - Partners
+  /storage-accounts/usage:
+    get:
+      description: This Endpoint is used to retrieve the usage information of all storage accounts.
+      parameters:
+      - description: Start of the timeframe from where the data should be shown
+        format: yyyy-mm-dd
+        in: query
+        name: from
+        required: true
+        type: string
+      - description: End of the timeframe from where the data should be shown
+        format: yyyy-mm-dd
+        in: query
+        name: to
+        required: true
+        type: string
+      responses:
+        '200':
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/api.ClientUsage'
+            type: array
+      security:
+      - Bearer: []
+      summary: Retrieves the usage of all storage accounts
+      tags:
+      - Partners
+definitions:
+  api.PatchStorageAccountReqBody:
+    properties:
+      pendingDeletedAt:
+        type: string
+        x-nullable: true
+    type: object
+  api.CreateStorageAccountReqBody:
+    properties:
+      allocatedCapacity:
+        minimum: 0
+        type: integer
+      allowOverdraft:
+        type: boolean
+      clientAccount:
+        $ref: '#/definitions/api.StorageAccountClientAccount'
+      name:
+        type: string
+    required:
+    - allocatedCapacity
+    - allowOverdraft
+    - clientAccount
+    - name
+    type: object
+  api.StorageAccountClientAccount:
+    properties:
+      contactEmail:
+        type: string
+      password:
+        description: 'Password The password of the account.
+
+          The following requirements apply to the password:
+
+          - must be at least 8 characters and no more than 128 characters in length
+
+          - must contain at lease one special character: !"#$%&''()*+,-./:;<=>?@[\]^_`{|}~
+
+          - must contain lower-case (a-z), upper-case (A-Z) and number (0-9) characters'
+        type: string
+    required:
+    - contactEmail
+    - password
+    type: object
+  api.DailyUsage:
+    properties:
+      allocated_capacity:
+        type: integer
+      date:
+        type: string
+      usage:
+        type: integer
+    type: object
+  api.ClientUsage:
+    properties:
+      allocated_capacity:
+        type: integer
+      client_id:
+        type: string
+      daily_usage:
+        items:
+          $ref: '#/definitions/api.DailyUsage'
+        type: array
+      name:
+        type: string
+    type: object
+  api.StorageAccountResponse:
+    properties:
+      allocatedCapacity:
+        type: integer
+      allowOverdraft:
+        type: boolean
+      clientAccountId:
+        type: string
+      contactEmail:
+        type: string
+      name:
+        type: string
+      pendingDeletedAt:
+        type: string
+    type: object
+securityDefinitions:
+  Bearer:
+    description: Type "Bearer" followed by a space and JWT token.
+    in: header
+    name: Authorization
+    type: apiKey

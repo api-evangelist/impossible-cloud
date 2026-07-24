@@ -1,0 +1,50 @@
+swagger: '2.0'
+info:
+  contact: {}
+  description: 'Public API designed to help our partners to automate their tasks.
+
+    Log in to Management Console, create API Key for your automation or reporting process and provide it in "Authorization" header per every request.'
+  title: Impossible Cloud Management Console public Distributors Integrations API
+  version: '1.0'
+host: api.partner.impossiblecloud.com
+basePath: /v1
+schemes:
+- https
+tags:
+- name: Integrations
+paths:
+  /integration/regions/list:
+    get:
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/api.ListRegionsResponse'
+      summary: Lists the available regions
+      tags:
+      - Integrations
+definitions:
+  api.Region:
+    properties:
+      iam_url:
+        type: string
+      name:
+        type: string
+      s3_url:
+        type: string
+      sts_url:
+        type: string
+    type: object
+  api.ListRegionsResponse:
+    properties:
+      regions:
+        items:
+          $ref: '#/definitions/api.Region'
+        type: array
+    type: object
+securityDefinitions:
+  Bearer:
+    description: Type "Bearer" followed by a space and JWT token.
+    in: header
+    name: Authorization
+    type: apiKey
