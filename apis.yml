@@ -1,8 +1,29 @@
 aid: impossible-cloud
 name: Impossible Cloud
-description: 'Impossible Cloud is a company surfaced as a portfolio company of hv-capital and added to
-  the API Evangelist network as a stub for enrichment. Sector: resilience-defence; ai-enterprise-software.
-  This profile is a lead awaiting the enrichment pipeline.'
+description: >-
+  Impossible Cloud is a European sovereign cloud platform headquartered in
+  Hamburg, Germany, providing S3-compatible object storage (11 nines durability,
+  Object Lock/WORM, no egress or API-call fees), bare metal NVIDIA GPU servers,
+  and managed AI services, all GDPR-ready by design and operated under EU
+  jurisdiction with no US CLOUD Act exposure. For partners, distributors, and
+  resellers it exposes the Management Console public API — a RESTful JSON API for
+  automating storage-account provisioning, partner and member management, region
+  discovery, and usage/billing reporting. The object storage service is fully AWS
+  S3 API compatible, so existing AWS SDKs, the AWS CLI, and S3 tooling work
+  against regional endpoints such as https://eu-central-2.storage.impossibleapi.net.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://www.impossiblecloud.com/favicon.ico
 url: https://raw.githubusercontent.com/api-evangelist/impossible-cloud/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,13 +33,124 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
-- Resilience Defence; Ai Enterprise Software
-apis: []
+- Cloud
+- Object Storage
+- S3
+- Storage
+- Infrastructure
+- GPU
+- AI Infrastructure
+- Data Sovereignty
+- Europe
+- GDPR
+- Partner API
+apis:
+- aid: impossible-cloud:impossible-cloud-distributors-api
+  name: Impossible Cloud Distributors API
+  description: The Distributors API from Impossible Cloud — 11 operation(s) for distributors.
+  humanURL: >-
+    https://docs.impossiblecloud.com/partner-portal-help/management-console-api/management-console-api
+  baseURL: https://api.partner.impossiblecloud.com/v1
+  tags:
+  - Distributors
+  properties:
+  - type: OpenAPI
+    url: openapi/impossible-cloud-distributors-api-openapi.yml
+  - type: Swagger
+    url: https://api.partner.impossiblecloud.com/swagger/
+- aid: impossible-cloud:impossible-cloud-integrations-api
+  name: Impossible Cloud Integrations API
+  description: The Integrations API from Impossible Cloud — 1 operation(s) for integrations.
+  humanURL: >-
+    https://docs.impossiblecloud.com/partner-portal-help/management-console-api/management-console-api
+  baseURL: https://api.partner.impossiblecloud.com/v1
+  tags:
+  - Integrations
+  properties:
+  - type: OpenAPI
+    url: openapi/impossible-cloud-integrations-api-openapi.yml
+  - type: Swagger
+    url: https://api.partner.impossiblecloud.com/swagger/
+- aid: impossible-cloud:impossible-cloud-partners-api
+  name: Impossible Cloud Partners API
+  description: The Partners API from Impossible Cloud — 5 operation(s) for partners.
+  humanURL: >-
+    https://docs.impossiblecloud.com/partner-portal-help/management-console-api/management-console-api
+  baseURL: https://api.partner.impossiblecloud.com/v1
+  tags:
+  - Partners
+  properties:
+  - type: OpenAPI
+    url: openapi/impossible-cloud-partners-api-openapi.yml
+  - type: Swagger
+    url: https://api.partner.impossiblecloud.com/swagger/
+common:
+- type: OpenAPI
+  url: openapi/impossible-cloud-management-console-openapi-original.json
+- type: LLMsTxt
+  url: llms/impossible-cloud-llms.txt
+- type: MCPServer
+  url: mcp/impossible-cloud-mcp.yml
+- type: Overlay
+  url: overlays/impossible-cloud-management-console-overlay.yaml
+- type: Conformance
+  url: conformance/impossible-cloud-conformance.yml
+- type: Lifecycle
+  url: lifecycle/impossible-cloud-lifecycle.yml
+- type: Conventions
+  url: conventions/impossible-cloud-conventions.yml
+- type: DataModel
+  url: data-model/impossible-cloud-data-model.yml
+- type: TrustCenter
+  url: security/impossible-cloud-trust-center.yml
+- type: DomainSecurity
+  url: security/impossible-cloud-domain-security.yml
+- type: AgenticAccess
+  url: agentic-access/impossible-cloud-agentic-access.yml
+- type: Authentication
+  url: authentication/impossible-cloud-authentication.yml
+- type: Website
+  url: https://www.impossiblecloud.com/
+- type: DeveloperPortal
+  url: https://docs.impossiblecloud.com/impossible-cloud-help/
+- type: Documentation
+  url: https://docs.impossiblecloud.com/impossible-cloud-help/
+- type: APIReference
+  url: https://api.partner.impossiblecloud.com/swagger/
+- type: GettingStarted
+  url: https://docs.impossiblecloud.com/partner-portal-help/management-console-api/management-console-api
+- type: Support
+  url: https://hs.impossiblecloud.com/en/customer-support
+- type: HelpCenter
+  url: https://kb.impossiblecloud.com/en
+- type: Blog
+  url: https://www.impossiblecloud.com/blog
+- type: GitHubOrganization
+  url: https://github.com/ImpossibleCloud
+- type: Pricing
+  url: https://www.impossiblecloud.com/pricing
+- type: SignUp
+  url: https://console.impossiblecloud.com
+- type: Login
+  url: https://console.impossiblecloud.com
+- type: TermsOfService
+  url: https://www.impossiblecloud.com/terms-of-service
+- type: PrivacyPolicy
+  url: https://www.impossiblecloud.com/legals-privacy
+- type: StatusPage
+  url: https://status.impossiblecloud.com/
+- type: Compliance
+  url: https://www.impossiblecloud.com/compliance
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

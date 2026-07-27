@@ -1,0 +1,42 @@
+generated: '2026-07-19'
+method: derived
+source: openapi/impossible-cloud-management-console-openapi-original.json
+docs: https://docs.impossiblecloud.com/partner-portal-help/management-console-api/management-console-api
+authentication:
+  style: api-key-bearer
+  location: header
+  header: Authorization
+  format: 'Bearer <API_KEY>'
+  note: >-
+    Partner-created API key passed as a Bearer token. See
+    authentication/impossible-cloud-authentication.yml.
+idempotency:
+  supported: false
+  note: No idempotency-key header or parameter documented or present in the OpenAPI.
+pagination:
+  supported: false
+  note: >-
+    List endpoints (contract/list, storage-account/list, members,
+    storage-accounts) declare no pagination parameters. Usage endpoints accept
+    `from`/`to` query date-range filters only.
+versioning:
+  style: uri-path
+  current: v1
+  cross_ref: lifecycle/impossible-cloud-lifecycle.yml
+error_envelope:
+  documented: false
+  note: >-
+    OpenAPI declares only 2xx responses (200/201/204); no error schema or
+    application/problem+json media type is published.
+rate_limiting:
+  documented: false
+  note: No rate-limit headers or quotas documented for the Management Console API.
+regions:
+  discovery_operation: GET /integration/regions/list
+  note: >-
+    Region objects expose name plus s3_url, iam_url, and sts_url endpoints for the
+    S3-compatible storage/IAM/STS services.
+cross_references:
+  authentication: authentication/impossible-cloud-authentication.yml
+  lifecycle: lifecycle/impossible-cloud-lifecycle.yml
+  data_model: data-model/impossible-cloud-data-model.yml

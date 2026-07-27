@@ -1,0 +1,57 @@
+generated: '2026-07-19'
+method: derived
+source: openapi/impossible-cloud-management-console-openapi-original.json
+note: >-
+  Entity graph derived from the Management Console API definitions and path
+  parameters (contractID, partnerID, memberID, accountID). id fields are opaque
+  identifiers; no documented id-prefix scheme.
+entities:
+- name: DistributorContract
+  definition: api.DistributorContractResponse
+  key: id
+  fields: [id, distributorId, allocatedCapacity, reservedCapacity, costStorageGBCents, costEgressGBCents, currency, details]
+- name: Partner
+  definition: api.DistributorPartnerResponse
+  key: id
+  fields: [id, name, distributorContractId, allocatedCapacity, allowOverdraft, details]
+- name: Member
+  definition: api.DistributorPartnerMembersResponse
+  key: id
+  fields: [id, name, email, role]
+- name: StorageAccount
+  definition: api.StorageAccountResponse
+  key: clientAccountId
+  fields: [name, clientAccountId, contactEmail, allocatedCapacity, allowOverdraft, pendingDeletedAt]
+- name: Region
+  definition: api.Region
+  key: name
+  fields: [name, s3_url, iam_url, sts_url]
+- name: ClientUsage
+  definition: api.ClientUsage
+  key: client_id
+  fields: [client_id, name, allocated_capacity, daily_usage]
+- name: DailyUsage
+  definition: api.DailyUsage
+  key: date
+  fields: [date, usage, allocated_capacity]
+relationships:
+- from: DistributorContract
+  to: Partner
+  type: has_many
+  via: distributorContractId
+- from: Partner
+  to: Member
+  type: has_many
+  via: partnerID
+- from: Partner
+  to: StorageAccount
+  type: has_many
+  via: partnerID
+- from: StorageAccount
+  to: ClientUsage
+  type: has_one
+  via: client_id
+- from: ClientUsage
+  to: DailyUsage
+  type: has_many
+  via: daily_usage

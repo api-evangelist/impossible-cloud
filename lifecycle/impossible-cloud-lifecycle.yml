@@ -1,0 +1,19 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.impossiblecloud.com/partner-portal-help/management-console-api/management-console-api
+versioning:
+  scheme: uri-path
+  current: v1
+  docs: https://api.partner.impossiblecloud.com/swagger/
+  note: >-
+    Management Console public API is served under /v1, with region-specific hosts
+    (e.g. https://api.partner.eu-west-1.impossiblecloud.com/v1).
+deprecation:
+  policy_url: null
+  sunset_header: null
+  note: No published deprecation/sunset policy found.
+status_page: https://status.impossiblecloud.com/
+sla:
+  url: null
+  note: No public SLA/uptime target page found; status page is public.
+deprecated_operations: []

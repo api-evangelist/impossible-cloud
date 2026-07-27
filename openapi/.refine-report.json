@@ -1,0 +1,18 @@
+{
+  "provider": "impossible-cloud",
+  "sources": [
+    "impossible-cloud-distributors-api-openapi.yml",
+    "impossible-cloud-integrations-api-openapi.yml",
+    "impossible-cloud-partners-api-openapi.yml"
+  ],
+  "outputs": [
+    "impossible-cloud-distributors-api-openapi.yml",
+    "impossible-cloud-integrations-api-openapi.yml",
+    "impossible-cloud-partners-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

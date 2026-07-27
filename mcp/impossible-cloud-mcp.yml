@@ -1,0 +1,87 @@
+generated: '2026-07-19'
+method: derived
+status: candidate
+source: openapi/impossible-cloud-management-console-openapi-original.json
+note: >-
+  No official hosted/remote MCP server was found for Impossible Cloud (checked
+  docs, GitHub org ImpossibleCloud, and MCP registries). This is a candidate tool
+  list derived one-to-one from the Management Console public API (Swagger 2.0).
+  The source spec declares no operationIds, so source_operation references the
+  HTTP method + path. Auth is a partner API key as a Bearer token in the
+  Authorization header.
+server:
+  name: impossible-cloud
+  transport: http
+tools:
+- name: get_contract_list
+  description: Get list of available distributor contracts
+  source_operation: GET /contract/list
+- name: get_contract_partners
+  description: Get list of partners in a contract
+  source_operation: GET /contract/{contractID}/partners
+- name: list_regions
+  description: List the available storage regions (name, s3/iam/sts URLs)
+  source_operation: GET /integration/regions/list
+- name: create_partner
+  description: Create a partner in the contract
+  source_operation: POST /partner
+- name: delete_partner
+  description: Delete a partner
+  source_operation: DELETE /partner/{partnerID}
+- name: get_partner
+  description: Get a partner by identifier
+  source_operation: GET /partner/{partnerID}
+- name: update_partner
+  description: Change a partner's name or allocation
+  source_operation: PUT /partner/{partnerID}
+- name: create_partner_member
+  description: Create a Management Console user for a specific distributor partner
+  source_operation: POST /partner/{partnerID}/member
+- name: delete_partner_member
+  description: Remove a Management Console user for a specific distributor partner
+  source_operation: DELETE /partner/{partnerID}/member/{memberID}
+- name: list_partner_members
+  description: List Management Console users for a specific distributor partner
+  source_operation: GET /partner/{partnerID}/members
+- name: list_partner_storage_accounts
+  description: Get list of available storage accounts for a partner
+  source_operation: GET /partner/{partnerID}/storage-accounts
+- name: create_partner_storage_account
+  description: Create a storage account for a partner
+  source_operation: POST /partner/{partnerID}/storage-accounts
+- name: delete_partner_storage_account
+  description: Schedule deletion of a partner's storage account
+  source_operation: DELETE /partner/{partnerID}/storage-accounts/{accountID}
+- name: get_partner_storage_account
+  description: Get a partner storage account by accountID
+  source_operation: GET /partner/{partnerID}/storage-accounts/{accountID}
+- name: update_partner_storage_account
+  description: Update a partner storage account by accountID
+  source_operation: PATCH /partner/{partnerID}/storage-accounts/{accountID}
+- name: get_partner_storage_account_usage
+  description: Retrieve usage of a distributor partner's storage account
+  source_operation: GET /partner/{partnerID}/storage-accounts/{accountID}/usage
+- name: get_partner_usage
+  description: Retrieve usage of all storage accounts of a distributor partner
+  source_operation: GET /partner/{partnerID}/usage
+- name: create_storage_account
+  description: Create a storage account
+  source_operation: POST /storage-account
+- name: list_storage_accounts
+  description: Get list of available storage accounts
+  source_operation: GET /storage-account/list
+- name: delete_storage_account
+  description: Schedule deletion of a storage account
+  source_operation: DELETE /storage-account/{accountID}
+- name: get_storage_account
+  description: Get a storage account by accountID
+  source_operation: GET /storage-account/{accountID}
+- name: update_storage_account
+  description: Update a storage account by accountID
+  source_operation: PATCH /storage-account/{accountID}
+- name: get_storage_account_usage
+  description: Retrieve usage of a storage account
+  source_operation: GET /storage-account/{accountID}/usage
+- name: get_storage_accounts_usage
+  description: Retrieve usage of all storage accounts
+  source_operation: GET /storage-accounts/usage

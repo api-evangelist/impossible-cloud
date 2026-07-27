@@ -1,0 +1,61 @@
+# Impossible Cloud
+
+> Impossible Cloud is a European sovereign cloud platform headquartered in Hamburg, Germany. It provides S3-compatible object storage (from €7.99 per TB/month, no egress or API fees), bare metal GPU servers (NVIDIA, from €2.60 per GPU card-hour), and managed AI services. All services are GDPR-ready by design, operated under EU jurisdiction with no US CLOUD Act exposure, and certified to ISO/IEC 27001 with SOC 2 and PCI DSS certified data centers.
+
+Key facts:
+
+- Founded in 2021, headquartered in Hamburg, Germany (Friesenweg 12, Haus 5, 22763 Hamburg)
+- European data sovereignty: data stays under EU jurisdiction, no non-European sub-processors
+- S3-compatible object storage with 99.999999999% (11 nines) durability and Object Lock (WORM) support
+- Transparent pricing: no egress fees, no API call charges, no minimum commitments, no lock-in periods
+- 50+ integrations with backup and cloud solutions, including Veeam, Acronis, MSP360, NAKIVO, and Hornetsecurity
+- 3,000+ enterprise customers, 200+ experts across Europe and globally
+- Contact: info@impossiblecloud.com
+
+## Products
+
+- [Object Storage](https://www.impossiblecloud.com/s3-storage): S3-compatible cloud object storage from €7.99 per TB/month with no egress or API fees, 11 nines durability, and Object Lock for immutable backups
+- [Bare Metal GPU](https://www.impossiblecloud.com/baremetal): Dedicated NVIDIA GPU servers without virtualization or resource sharing, from €2.60 per GPU card-hour
+- [AI Services](https://www.impossiblecloud.com/ai-services): Fully managed LLM inference, model deployments, managed Kubernetes, and HPC
+- [Backup Solutions](https://www.impossiblecloud.com/backup-solutions): Cloud storage for backup and disaster recovery with leading backup software integrations
+- [Solutions](https://www.impossiblecloud.com/solutions): Overview of use cases and industry solutions
+- [Pricing](https://www.impossiblecloud.com/pricing): Transparent pricing for storage, GPU, and AI services, including reserved capacity plans with long-term discounts
+
+## Documentation
+
+- [Product Documentation](https://docs.impossiblecloud.com/impossible-cloud-help/): Technical documentation for storage, GPU, and AI services
+- [Knowledge Base](https://kb.impossiblecloud.com/en): How-to guides and frequently asked questions
+- [Support Portal](https://hs.impossiblecloud.com/en/customer-support): Customer support
+- [Storage Console](https://console.impossiblecloud.com): Login to the storage management console
+
+## Partners
+
+- [Become a Partner](https://www.impossiblecloud.com/become-a-partner): Partner and reseller program for MSPs, resellers, and distributors
+- [Partner Directory](https://www.impossiblecloud.com/partner-directory): Directory of Impossible Cloud partners
+- [Free Trial for Partners](https://www.impossiblecloud.com/free-trial-for-partners): Test account for partners
+
+## Company
+
+- [About Us](https://www.impossiblecloud.com/about-us): Company background, mission, and team
+- [Case Studies](https://www.impossiblecloud.com/case-studies): Customer success stories
+- [Media Room](https://www.impossiblecloud.com/media-room): Press releases and media resources
+- [Events](https://www.impossiblecloud.com/events): Trade shows and events
+- [Careers](https://jobs.lever.co/impossiblecloud): Open positions
+- [Contact](https://www.impossiblecloud.com/get-a-consultation): Get a consultation
+
+## Resources
+
+- [Blog](https://www.impossiblecloud.com/blog): Articles on cloud storage, data sovereignty, GDPR, backup, and security
+- [Content Hub](https://www.impossiblecloud.com/content-hub): Whitepapers, guides, and downloadable resources
+- [Free Trial](https://www.impossiblecloud.com/free-trial): Free trial of Impossible Cloud storage
+
+## Optional
+
+- [German Site](https://www.impossiblecloud.com/de-de): German-language version
+- [Dutch Site](https://www.impossiblecloud.com/nl-nl): Dutch-language version
+- [US Site](https://www.impossiblecloud.com/en-us): US English version
+- [Magazine](https://www.impossiblecloud.com/magazine): Online magazine
+- [Newsletter](https://www.impossiblecloud.com/newsletter): Newsletter signup
+- [Terms of Service](https://www.impossiblecloud.com/terms-of-service): Service terms
+- [Terms of Use](https://www.impossiblecloud.com/terms-of-use): Website terms of use
+- [Legal & Privacy](https://www.impossiblecloud.com/legals-privacy): Imprint and privacy policy

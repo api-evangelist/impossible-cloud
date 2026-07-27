@@ -1,0 +1,15 @@
+generated: '2026-07-19'
+method: searched
+probe: true
+source: https://www.impossiblecloud.com/
+url: https://www.impossiblecloud.com/
+certifications:
+- SOC 2
+- ISO 27001
+- GDPR
+evidence:
+- source: https://www.impossiblecloud.com/
+  keywords:
+  - soc 2
+  - iso 27001
+  - gdpr

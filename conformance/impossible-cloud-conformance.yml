@@ -1,0 +1,41 @@
+generated: '2026-07-19'
+method: searched
+source: openapi/impossible-cloud-management-console-openapi-original.json
+docs: https://www.impossiblecloud.com/compliance
+standards:
+- id: s3-api-compatibility
+  conforms: true
+  evidence: >-
+    Object storage service is fully AWS S3 API compatible; existing AWS SDKs, AWS
+    CLI, and S3 tooling work against regional endpoints (e.g.
+    eu-central-2.storage.impossibleapi.net).
+- id: bearer-api-key
+  conforms: true
+  evidence: >-
+    Management Console API securityDefinitions declares a Bearer API-key scheme
+    (Authorization header).
+- id: oauth2
+  conforms: false
+  evidence: No oauth2 security scheme in the OpenAPI.
+- id: openid-connect
+  conforms: false
+  evidence: No /.well-known/openid-configuration (404).
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: Spec declares no error responses or application/problem+json media type.
+- id: iso-iec-27001
+  conforms: true
+  evidence: >-
+    Company is ISO/IEC 27001 certified; ISMS audited to the standard
+    (https://www.impossiblecloud.com/compliance).
+- id: soc-2
+  conforms: true
+  evidence: Services delivered through data centers certified to SOC 2.
+- id: pci-dss
+  conforms: true
+  evidence: Services delivered through data centers certified to PCI DSS.
+- id: gdpr
+  conforms: true
+  evidence: >-
+    GDPR-ready by design; EU jurisdiction with no non-European sub-processors and
+    no US CLOUD Act exposure.
