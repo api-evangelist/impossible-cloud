@@ -89,7 +89,7 @@ apis:
     url: https://api.partner.impossiblecloud.com/swagger/
 common:
 - type: OpenAPI
-  url: openapi/impossible-cloud-management-console-openapi-original.json
+  url: openapi/_original/impossible-cloud-management-console-openapi-original.json
 - type: LLMsTxt
   url: llms/impossible-cloud-llms.txt
 - type: MCPServer
