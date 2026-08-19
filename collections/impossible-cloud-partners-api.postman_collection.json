@@ -1,0 +1,829 @@
+{
+  "item": [
+    {
+      "id": "78eeb7ef-c5c3-40cc-bed9-ab9bb7edfd73",
+      "name": "Partners",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "7058f6e9-8a1b-423f-8bd1-aedb4b5d9b20",
+          "name": "Create a storage account",
+          "request": {
+            "name": "Create a storage account",
+            "description": {},
+            "url": {
+              "path": [
+                "storage-account"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"allocatedCapacity\": \"<integer>\",\n  \"allowOverdraft\": \"<boolean>\",\n  \"clientAccount\": {\n    \"contactEmail\": \"<string>\",\n    \"password\": \"<string>\"\n  },\n  \"name\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "f180d751-14a1-4317-92dc-7008188a2a2e",
+              "name": "Created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "storage-account"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"allocatedCapacity\": \"<integer>\",\n  \"allowOverdraft\": \"<boolean>\",\n  \"clientAccount\": {\n    \"contactEmail\": \"<string>\",\n    \"password\": \"<string>\"\n  },\n  \"name\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"allocatedCapacity\": 7862,\n  \"allowOverdraft\": true,\n  \"clientAccountId\": \"string\",\n  \"contactEmail\": \"string\",\n  \"name\": \"string\",\n  \"pendingDeletedAt\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0f1c1cfb-9ed7-44c2-bf91-2e399fe7392c",
+          "name": "Get list of available storage accounts",
+          "request": {
+            "name": "Get list of available storage accounts",
+            "description": {},
+            "url": {
+              "path": [
+                "storage-account",
+                "list"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "f239246e-ba2d-4a64-960b-27ec32e53f97",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "storage-account",
+                    "list"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"allocatedCapacity\": 222,\n    \"allowOverdraft\": false,\n    \"clientAccountId\": \"string\",\n    \"contactEmail\": \"string\",\n    \"name\": \"string\",\n    \"pendingDeletedAt\": \"string\"\n  },\n  {\n    \"allocatedCapacity\": 2088,\n    \"allowOverdraft\": true,\n    \"clientAccountId\": \"string\",\n    \"contactEmail\": \"string\",\n    \"name\": \"string\",\n    \"pendingDeletedAt\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "193a2d4f-db1e-4b66-9ab7-f187e784e6d5",
+          "name": "Schedule the deletion of a storage account",
+          "request": {
+            "name": "Schedule the deletion of a storage account",
+            "description": {
+              "content": "By default the storage account will be deleted in 30 days after scheduling.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "storage-account",
+                ":accountID"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "accountID",
+                  "description": "(Required) Storage Account ID you can find in /storage-account/list"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "6711339e-db47-43bc-a0d5-cea28e54af4a",
+              "name": "No Content",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "storage-account",
+                    ":accountID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "accountID",
+                      "description": "(Required) Storage Account ID you can find in /storage-account/list"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "09db36ac-9317-4f08-af16-9de4bfff56b8",
+          "name": "Get account info by accountID",
+          "request": {
+            "name": "Get account info by accountID",
+            "description": {},
+            "url": {
+              "path": [
+                "storage-account",
+                ":accountID"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "accountID",
+                  "description": "(Required) Storage Account ID you can find in /storage-account/list"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "d1a54fba-dc69-42e9-972f-1db834475402",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "storage-account",
+                    ":accountID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "accountID",
+                      "description": "(Required) Storage Account ID you can find in /storage-account/list"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"allocatedCapacity\": 7862,\n  \"allowOverdraft\": true,\n  \"clientAccountId\": \"string\",\n  \"contactEmail\": \"string\",\n  \"name\": \"string\",\n  \"pendingDeletedAt\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1fe21a2c-95aa-49bd-861d-0c869c4f7f25",
+          "name": "Update information of an account by accountID",
+          "request": {
+            "name": "Update information of an account by accountID",
+            "description": {},
+            "url": {
+              "path": [
+                "storage-account",
+                ":accountID"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "accountID",
+                  "description": "(Required) Storage Account ID you can find in /storage-account/list"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "PATCH",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"pendingDeletedAt\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "b32eefb1-3394-408e-8efd-0e1a031b1384",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "storage-account",
+                    ":accountID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "accountID",
+                      "description": "(Required) Storage Account ID you can find in /storage-account/list"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"pendingDeletedAt\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"allocatedCapacity\": 7862,\n  \"allowOverdraft\": true,\n  \"clientAccountId\": \"string\",\n  \"contactEmail\": \"string\",\n  \"name\": \"string\",\n  \"pendingDeletedAt\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a08b4e61-2a49-4725-bb14-996b95dbda9f",
+          "name": "Retrieves the usage of the storage account",
+          "request": {
+            "name": "Retrieves the usage of the storage account",
+            "description": {},
+            "url": {
+              "path": [
+                "storage-account",
+                ":accountID",
+                "usage"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "from",
+                  "value": "<yyyy-mm-dd>",
+                  "description": "(Required) Start of the timeframe from where the data should be shown"
+                },
+                {
+                  "disabled": false,
+                  "key": "to",
+                  "value": "<yyyy-mm-dd>",
+                  "description": "(Required) End of the timeframe from where the data should be shown"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "accountID",
+                  "description": "(Required) Storage Account identifier"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "db91aa26-4973-41a9-bc33-713f1bc472c7",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "storage-account",
+                    ":accountID",
+                    "usage"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "from",
+                      "value": "<yyyy-mm-dd>"
+                    },
+                    {
+                      "key": "to",
+                      "value": "<yyyy-mm-dd>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "accountID",
+                      "description": "(Required) Storage Account identifier"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"allocated_capacity\": 3314,\n  \"client_id\": \"string\",\n  \"daily_usage\": [\n    {\n      \"allocated_capacity\": 8458,\n      \"date\": \"string\",\n      \"usage\": 6949\n    },\n    {\n      \"allocated_capacity\": 8923,\n      \"date\": \"string\",\n      \"usage\": 4029\n    }\n  ],\n  \"name\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "83bb6dfd-4d60-42d8-b353-a6647555fe19",
+          "name": "Retrieves the usage of all storage accounts",
+          "request": {
+            "name": "Retrieves the usage of all storage accounts",
+            "description": {
+              "content": "This Endpoint is used to retrieve the usage information of all storage accounts.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "storage-accounts",
+                "usage"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "from",
+                  "value": "<yyyy-mm-dd>",
+                  "description": "(Required) Start of the timeframe from where the data should be shown"
+                },
+                {
+                  "disabled": false,
+                  "key": "to",
+                  "value": "<yyyy-mm-dd>",
+                  "description": "(Required) End of the timeframe from where the data should be shown"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "f5d6ff67-2758-450a-9853-1492f3302217",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "storage-accounts",
+                    "usage"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "from",
+                      "value": "<yyyy-mm-dd>"
+                    },
+                    {
+                      "key": "to",
+                      "value": "<yyyy-mm-dd>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"allocated_capacity\": 1441,\n    \"client_id\": \"string\",\n    \"daily_usage\": [\n      {\n        \"allocated_capacity\": 2158,\n        \"date\": \"string\",\n        \"usage\": 6356\n      },\n      {\n        \"allocated_capacity\": 6325,\n        \"date\": \"string\",\n        \"usage\": 2176\n      }\n    ],\n    \"name\": \"string\"\n  },\n  {\n    \"allocated_capacity\": 7463,\n    \"client_id\": \"string\",\n    \"daily_usage\": [\n      {\n        \"allocated_capacity\": 6989,\n        \"date\": \"string\",\n        \"usage\": 8819\n      },\n      {\n        \"allocated_capacity\": 3254,\n        \"date\": \"string\",\n        \"usage\": 2845\n      }\n    ],\n    \"name\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.partner.impossiblecloud.com/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "fd112de8-a319-46e1-8f21-7aca3419de3e",
+    "name": "Impossible Cloud Management Console public Distributors Partners API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Public API designed to help our partners to automate their tasks.\nLog in to Management Console, create API Key for your automation or reporting process and provide it in \"Authorization\" header per every request.",
+      "type": "text/plain"
+    }
+  }
+}

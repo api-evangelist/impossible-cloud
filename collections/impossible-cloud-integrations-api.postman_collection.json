@@ -1,0 +1,103 @@
+{
+  "item": [
+    {
+      "id": "92b03622-aba8-4602-a91f-abce3e549819",
+      "name": "Integrations",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "3d87cfb7-5c02-4c17-b573-95cca25f713f",
+          "name": "Lists the available regions",
+          "request": {
+            "name": "Lists the available regions",
+            "description": {},
+            "url": {
+              "path": [
+                "integration",
+                "regions",
+                "list"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4a060668-4b93-4a4d-8368-9ba3c7282c54",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "integration",
+                    "regions",
+                    "list"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"regions\": [\n    {\n      \"iam_url\": \"string\",\n      \"name\": \"string\",\n      \"s3_url\": \"string\",\n      \"sts_url\": \"string\"\n    },\n    {\n      \"iam_url\": \"string\",\n      \"name\": \"string\",\n      \"s3_url\": \"string\",\n      \"sts_url\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.partner.impossiblecloud.com/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "7387798e-34df-4224-97dd-4ca7b3db68e1",
+    "name": "Impossible Cloud Management Console public Distributors Integrations API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Public API designed to help our partners to automate their tasks.\nLog in to Management Console, create API Key for your automation or reporting process and provide it in \"Authorization\" header per every request.",
+      "type": "text/plain"
+    }
+  }
+}

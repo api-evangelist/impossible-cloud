@@ -2,13 +2,10 @@ generated: '2026-07-19'
 method: derived
 status: candidate
 source: openapi/impossible-cloud-management-console-openapi-original.json
-note: >-
-  No official hosted/remote MCP server was found for Impossible Cloud (checked
-  docs, GitHub org ImpossibleCloud, and MCP registries). This is a candidate tool
-  list derived one-to-one from the Management Console public API (Swagger 2.0).
-  The source spec declares no operationIds, so source_operation references the
-  HTTP method + path. Auth is a partner API key as a Bearer token in the
-  Authorization header.
+note: No official hosted/remote MCP server was found for Impossible Cloud (checked docs, GitHub org ImpossibleCloud,
+  and MCP registries). This is a candidate tool list derived one-to-one from the Management Console public
+  API (Swagger 2.0). The source spec declares no operationIds, so source_operation references the HTTP
+  method + path. Auth is a partner API key as a Bearer token in the Authorization header.
 server:
   name: impossible-cloud
   transport: http
@@ -85,3 +82,9 @@ tools:
 - name: get_storage_accounts_usage
   description: Retrieve usage of all storage accounts
   source_operation: GET /storage-accounts/usage
+deployment:
+  mode: none
+  verified: derived
+  tools: 24
+  checked: '2026-08-12'
+  source: catalog MCP census

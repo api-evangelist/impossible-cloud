@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Impossible Cloud Management Console public Distributors Integrations API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Integrations",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Lists the available regions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/integration/regions/list"
+          },
+          "docs": "Lists the available regions"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

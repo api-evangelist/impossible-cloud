@@ -1,0 +1,1978 @@
+{
+  "item": [
+    {
+      "id": "1ac118aa-9b74-4a13-a350-4b39d40146a6",
+      "name": "Distributors",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "bc6e8627-961d-432e-9ea6-371cc08647c1",
+          "name": "Get list of available contracts",
+          "request": {
+            "name": "Get list of available contracts",
+            "description": {
+              "content": "This endpoint retrieves a list of available contracts.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "contract",
+                "list"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "365db9b7-22ab-49b4-b4e0-cee39e320c50",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "contract",
+                    "list"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"allocatedCapacity\": 5121,\n    \"costEgressGBCents\": 240.4963793522441,\n    \"costStorageGBCents\": 7143.83094478563,\n    \"currency\": \"string\",\n    \"details\": \"string\",\n    \"distributorId\": \"string\",\n    \"id\": \"string\",\n    \"reservedCapacity\": 7501\n  },\n  {\n    \"allocatedCapacity\": 4786,\n    \"costEgressGBCents\": 6979.329027148309,\n    \"costStorageGBCents\": 904.7829367358529,\n    \"currency\": \"string\",\n    \"details\": \"string\",\n    \"distributorId\": \"string\",\n    \"id\": \"string\",\n    \"reservedCapacity\": 9496\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6fa2ae38-1118-41f0-93f5-2c760ea15d6e",
+          "name": "Get list of partners in the contract",
+          "request": {
+            "name": "Get list of partners in the contract",
+            "description": {
+              "content": "This endpoint retrieves a list of partners associated with a specific contract.\nUse Case: As a Distributor, I want to list all available Partners in a specific contract.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "contract",
+                ":contractID",
+                "partners"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "contractID",
+                  "description": "(Required) The unique identifier (UUID) of the contract for which the partners are to be listed"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "534e1c1a-65f7-447d-bf96-9fa4c569ddd1",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "contract",
+                    ":contractID",
+                    "partners"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "contractID",
+                      "description": "(Required) The unique identifier (UUID) of the contract for which the partners are to be listed"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"allocatedCapacity\": 4663,\n    \"allowOverdraft\": false,\n    \"details\": \"string\",\n    \"distributorContractId\": \"string\",\n    \"id\": \"string\",\n    \"name\": \"string\"\n  },\n  {\n    \"allocatedCapacity\": 314,\n    \"allowOverdraft\": false,\n    \"details\": \"string\",\n    \"distributorContractId\": \"string\",\n    \"id\": \"string\",\n    \"name\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ebd6daba-5939-4066-afe1-8d7eeee17ea8",
+          "name": "Create partner in the contract",
+          "request": {
+            "name": "Create partner in the contract",
+            "description": {
+              "content": "This endpoint allows the creation of a new partner within a specific contract. It is designed for distributors to add partners to their contracts efficiently.\nUse Case: As a Distributor, I want to create a new Partner within a specific contract to expand my network and manage my contractual relationships.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "partner"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"allocatedCapacity\": \"<integer>\",\n  \"distributorContractId\": \"<string>\",\n  \"name\": \"<string>\",\n  \"allowOverdraft\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "c5fa71e9-5014-4306-8279-9f8f48286fc8",
+              "name": "Created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partner"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"allocatedCapacity\": \"<integer>\",\n  \"distributorContractId\": \"<string>\",\n  \"name\": \"<string>\",\n  \"allowOverdraft\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"allocatedCapacity\": 8102,\n  \"allowOverdraft\": false,\n  \"details\": \"string\",\n  \"distributorContractId\": \"string\",\n  \"id\": \"string\",\n  \"name\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "261f80da-75ca-4ec1-9ebe-2af489cadefb",
+          "name": "Delete a partner",
+          "request": {
+            "name": "Delete a partner",
+            "description": {
+              "content": "Deletes an empty partner. Fails if the partner already has storage accounts associated.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "partner",
+                ":partnerID"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "partnerID",
+                  "description": "(Required) The unique identifier (UUID) of the partner to be deleted"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "15db78ee-6d60-4a34-b1ad-b85abe7a329b",
+              "name": "No Content",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partner",
+                    ":partnerID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "partnerID",
+                      "description": "(Required) The unique identifier (UUID) of the partner to be deleted"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7be077cc-d9a5-477c-9f42-80761c01e7fa",
+          "name": "Get a partner by identifier",
+          "request": {
+            "name": "Get a partner by identifier",
+            "description": {},
+            "url": {
+              "path": [
+                "partner",
+                ":partnerID"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "partnerID",
+                  "description": "(Required) The unique identifier of the partner to be retrieved"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "e3672393-5fc3-48c4-93c2-40395a8a6c3f",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partner",
+                    ":partnerID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "partnerID",
+                      "description": "(Required) The unique identifier of the partner to be retrieved"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"allocatedCapacity\": 8102,\n  \"allowOverdraft\": false,\n  \"details\": \"string\",\n  \"distributorContractId\": \"string\",\n  \"id\": \"string\",\n  \"name\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3dc090a1-533d-4a30-8e3a-582f8ba2c03c",
+          "name": "Change partner's name or allocation",
+          "request": {
+            "name": "Change partner's name or allocation",
+            "description": {
+              "content": "This endpoint enables a distributor to update a partner's name or allocated capacity.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "partner",
+                ":partnerID"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "partnerID",
+                  "description": "(Required) The unique identifier (UUID) of the partner whose details are to be updated"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "PUT",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"allocatedCapacity\": \"<integer>\",\n  \"name\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "2c8027dd-80f6-42f2-9bbd-d6570ad96285",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partner",
+                    ":partnerID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "partnerID",
+                      "description": "(Required) The unique identifier (UUID) of the partner whose details are to be updated"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"allocatedCapacity\": \"<integer>\",\n  \"name\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"allocatedCapacity\": 8102,\n  \"allowOverdraft\": false,\n  \"details\": \"string\",\n  \"distributorContractId\": \"string\",\n  \"id\": \"string\",\n  \"name\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "92e39d57-78ae-4f70-a66f-a1d17fc45e9f",
+          "name": "Create Management Console user for specific distributor partner",
+          "request": {
+            "name": "Create Management Console user for specific distributor partner",
+            "description": {
+              "content": "This endpoint facilitates the creation of a Management Console user for a specific distributor partner.\nUse Case: As a Distributor, I can create Management Console users (Members) for a specific Partner by its ID,",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "partner",
+                ":partnerID",
+                "member"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "partnerID",
+                  "description": "(Required) The unique identifier (UUID) of the partner for whom the Management Console user is to be created"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"role\": \"<string>\",\n  \"name\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "11285652-4e22-43ac-bd32-22045e2fb319",
+              "name": "Created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partner",
+                    ":partnerID",
+                    "member"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "partnerID",
+                      "description": "(Required) The unique identifier (UUID) of the partner for whom the Management Console user is to be created"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"role\": \"<string>\",\n  \"name\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"email\": \"string\",\n  \"id\": \"string\",\n  \"name\": \"string\",\n  \"role\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "19519c7a-b91b-4fca-9ff5-d687bf38fff3",
+          "name": "Remove Management Console user for a specific distributor partner",
+          "request": {
+            "name": "Remove Management Console user for a specific distributor partner",
+            "description": {
+              "content": "This endpoint facilitates the removal of a Management Console user for a specific distributor partner.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "partner",
+                ":partnerID",
+                "member",
+                ":memberID"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "partnerID",
+                  "description": "(Required) The unique identifier (UUID) of the partner for whom the Management Console user is to be removed"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "memberID",
+                  "description": "(Required) The unique identifier (UUID) of the member to be removed"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "552221d4-d1b9-429b-85b4-e9c6dc52144b",
+              "name": "No Content",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partner",
+                    ":partnerID",
+                    "member",
+                    ":memberID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "partnerID",
+                      "description": "(Required) The unique identifier (UUID) of the partner for whom the Management Console user is to be removed"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "memberID",
+                      "description": "(Required) The unique identifier (UUID) of the member to be removed"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a4bd63bb-e7f6-48ad-8522-08586ca0d721",
+          "name": "List Management Console users for specific distributor partner",
+          "request": {
+            "name": "List Management Console users for specific distributor partner",
+            "description": {},
+            "url": {
+              "path": [
+                "partner",
+                ":partnerID",
+                "members"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "partnerID",
+                  "description": "(Required) The unique identifier (UUID) of the partner for whom the Management Console users is to be listed"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "7205177a-32de-4fc2-a894-8aa6050c126d",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partner",
+                    ":partnerID",
+                    "members"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "partnerID",
+                      "description": "(Required) The unique identifier (UUID) of the partner for whom the Management Console users is to be listed"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"email\": \"string\",\n    \"id\": \"string\",\n    \"name\": \"string\",\n    \"role\": \"string\"\n  },\n  {\n    \"email\": \"string\",\n    \"id\": \"string\",\n    \"name\": \"string\",\n    \"role\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ef40f24e-30dd-48ee-be68-909f0184de86",
+          "name": "Get list of available storage accounts",
+          "request": {
+            "name": "Get list of available storage accounts",
+            "description": {},
+            "url": {
+              "path": [
+                "partner",
+                ":partnerID",
+                "storage-accounts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "partnerID",
+                  "description": "(Required) The unique identifier of the partner"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "6cf88c72-b684-4c3b-8d14-45afb2b418b9",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partner",
+                    ":partnerID",
+                    "storage-accounts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "partnerID",
+                      "description": "(Required) The unique identifier of the partner"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"allocatedCapacity\": 7684,\n    \"allowOverdraft\": false,\n    \"clientAccountId\": \"string\",\n    \"contactEmail\": \"string\",\n    \"name\": \"string\",\n    \"pendingDeletedAt\": \"string\"\n  },\n  {\n    \"allocatedCapacity\": 9881,\n    \"allowOverdraft\": true,\n    \"clientAccountId\": \"string\",\n    \"contactEmail\": \"string\",\n    \"name\": \"string\",\n    \"pendingDeletedAt\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "bfe61661-d5f6-4411-9afb-ee1f3a90f52c",
+          "name": "Create a storage account for a partner",
+          "request": {
+            "name": "Create a storage account for a partner",
+            "description": {},
+            "url": {
+              "path": [
+                "partner",
+                ":partnerID",
+                "storage-accounts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "partnerID",
+                  "description": "(Required) The unique identifier of the partner"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"allocatedCapacity\": \"<integer>\",\n  \"allowOverdraft\": \"<boolean>\",\n  \"clientAccount\": {\n    \"contactEmail\": \"<string>\",\n    \"password\": \"<string>\"\n  },\n  \"name\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "a4779591-a606-41cf-b5e2-69ae05e14db4",
+              "name": "Created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partner",
+                    ":partnerID",
+                    "storage-accounts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "partnerID",
+                      "description": "(Required) The unique identifier of the partner"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"allocatedCapacity\": \"<integer>\",\n  \"allowOverdraft\": \"<boolean>\",\n  \"clientAccount\": {\n    \"contactEmail\": \"<string>\",\n    \"password\": \"<string>\"\n  },\n  \"name\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"allocatedCapacity\": 9968,\n  \"allowOverdraft\": false,\n  \"clientAccountId\": \"string\",\n  \"contactEmail\": \"string\",\n  \"name\": \"string\",\n  \"pendingDeletedAt\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "385ab204-1abf-4a98-aac1-08feb154fc0d",
+          "name": "Schedule the deletion of a storage account",
+          "request": {
+            "name": "Schedule the deletion of a storage account",
+            "description": {
+              "content": "By default the storage account will be deleted in 30 days after scheduling.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "partner",
+                ":partnerID",
+                "storage-accounts",
+                ":accountID"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "accountID",
+                  "description": "(Required) Storage account identifier"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "partnerID",
+                  "description": "(Required) The unique identifier of the partner"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "e196655d-524e-43a5-aa20-c4414398d675",
+              "name": "No Content",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partner",
+                    ":partnerID",
+                    "storage-accounts",
+                    ":accountID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "accountID",
+                      "description": "(Required) Storage account identifier"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "partnerID",
+                      "description": "(Required) The unique identifier of the partner"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "68fdf330-84b2-459c-bb6f-30ed1f60d239",
+          "name": "Get account info by accountID",
+          "request": {
+            "name": "Get account info by accountID",
+            "description": {},
+            "url": {
+              "path": [
+                "partner",
+                ":partnerID",
+                "storage-accounts",
+                ":accountID"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "accountID",
+                  "description": "(Required) Storage Account identifier"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "partnerID",
+                  "description": "(Required) The unique identifier of the partner"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "7bee3661-58ad-41f1-88c9-14ebcfc21a0c",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partner",
+                    ":partnerID",
+                    "storage-accounts",
+                    ":accountID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "accountID",
+                      "description": "(Required) Storage Account identifier"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "partnerID",
+                      "description": "(Required) The unique identifier of the partner"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"allocatedCapacity\": 9968,\n  \"allowOverdraft\": false,\n  \"clientAccountId\": \"string\",\n  \"contactEmail\": \"string\",\n  \"name\": \"string\",\n  \"pendingDeletedAt\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e062dbae-5c99-45a4-810c-3a7fdbeded54",
+          "name": "Update information of an account by accountID",
+          "request": {
+            "name": "Update information of an account by accountID",
+            "description": {},
+            "url": {
+              "path": [
+                "partner",
+                ":partnerID",
+                "storage-accounts",
+                ":accountID"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "accountID",
+                  "description": "(Required) Storage Account ID you can find in /partner/{partnerID}/storage-account/list"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "PATCH",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"pendingDeletedAt\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "7ad38221-5e93-47b8-98fa-6e5d9e25b48d",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partner",
+                    ":partnerID",
+                    "storage-accounts",
+                    ":accountID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "accountID",
+                      "description": "(Required) Storage Account ID you can find in /partner/{partnerID}/storage-account/list"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"pendingDeletedAt\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"allocatedCapacity\": 9968,\n  \"allowOverdraft\": false,\n  \"clientAccountId\": \"string\",\n  \"contactEmail\": \"string\",\n  \"name\": \"string\",\n  \"pendingDeletedAt\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "cd0dec1e-2c51-494a-9c8b-cfc0f81888b5",
+          "name": "Retrieves the usage of the storage account of a given distributor partner",
+          "request": {
+            "name": "Retrieves the usage of the storage account of a given distributor partner",
+            "description": {},
+            "url": {
+              "path": [
+                "partner",
+                ":partnerID",
+                "storage-accounts",
+                ":accountID",
+                "usage"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "from",
+                  "value": "<yyyy-mm-dd>",
+                  "description": "(Required) Start of the timeframe from where the data should be shown"
+                },
+                {
+                  "disabled": false,
+                  "key": "to",
+                  "value": "<yyyy-mm-dd>",
+                  "description": "(Required) End of the timeframe from where the data should be shown"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "accountID",
+                  "description": "(Required) Storage Account identifier"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "partnerID",
+                  "description": "(Required) The unique identifier of the partner"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "c94a2fe6-a9ea-42d6-9ad0-0c8ecba0b0be",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partner",
+                    ":partnerID",
+                    "storage-accounts",
+                    ":accountID",
+                    "usage"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "from",
+                      "value": "<yyyy-mm-dd>"
+                    },
+                    {
+                      "key": "to",
+                      "value": "<yyyy-mm-dd>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "accountID",
+                      "description": "(Required) Storage Account identifier"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "partnerID",
+                      "description": "(Required) The unique identifier of the partner"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"allocated_capacity\": 4985,\n  \"client_id\": \"string\",\n  \"daily_usage\": [\n    {\n      \"allocated_capacity\": 6408,\n      \"date\": \"string\",\n      \"usage\": 1731\n    },\n    {\n      \"allocated_capacity\": 3577,\n      \"date\": \"string\",\n      \"usage\": 778\n    }\n  ],\n  \"name\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fa416215-0f50-4d68-a82d-364db9afdb43",
+          "name": "Retrieves the usage of all the storage accounts of a given distributor partner",
+          "request": {
+            "name": "Retrieves the usage of all the storage accounts of a given distributor partner",
+            "description": {
+              "content": "This Endpoint is used to retrieve the usage information of each storage account a specific distributor partner has.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "partner",
+                ":partnerID",
+                "usage"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "from",
+                  "value": "<yyyy-mm-dd>",
+                  "description": "(Required) Start of the timeframe from where the data should be shown"
+                },
+                {
+                  "disabled": false,
+                  "key": "to",
+                  "value": "<yyyy-mm-dd>",
+                  "description": "(Required) End of the timeframe from where the data should be shown"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "partnerID",
+                  "description": "(Required) The unique identifier (UUID) of the partner for whom the Management Console users is to be listed"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "Authorization"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "13d4cba1-00ad-4ca1-9283-4db3756836ba",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "partner",
+                    ":partnerID",
+                    "usage"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "from",
+                      "value": "<yyyy-mm-dd>"
+                    },
+                    {
+                      "key": "to",
+                      "value": "<yyyy-mm-dd>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "partnerID",
+                      "description": "(Required) The unique identifier (UUID) of the partner for whom the Management Console users is to be listed"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "[\n  {\n    \"allocated_capacity\": 6599,\n    \"client_id\": \"string\",\n    \"daily_usage\": [\n      {\n        \"allocated_capacity\": 9589,\n        \"date\": \"string\",\n        \"usage\": 5757\n      },\n      {\n        \"allocated_capacity\": 5939,\n        \"date\": \"string\",\n        \"usage\": 4427\n      }\n    ],\n    \"name\": \"string\"\n  },\n  {\n    \"allocated_capacity\": 7266,\n    \"client_id\": \"string\",\n    \"daily_usage\": [\n      {\n        \"allocated_capacity\": 4406,\n        \"date\": \"string\",\n        \"usage\": 778\n      },\n      {\n        \"allocated_capacity\": 3060,\n        \"date\": \"string\",\n        \"usage\": 6286\n      }\n    ],\n    \"name\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.partner.impossiblecloud.com/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "798d5251-c6f6-4e80-97a7-ed4d25dd2e3e",
+    "name": "Impossible Cloud Management Console public Distributors API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Public API designed to help our partners to automate their tasks.\nLog in to Management Console, create API Key for your automation or reporting process and provide it in \"Authorization\" header per every request.",
+      "type": "text/plain"
+    }
+  }
+}

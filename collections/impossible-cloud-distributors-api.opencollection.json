@@ -1,0 +1,354 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Impossible Cloud Management Console public Distributors API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Distributors",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get list of available contracts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/contract/list"
+          },
+          "docs": "This endpoint retrieves a list of available contracts."
+        },
+        {
+          "info": {
+            "name": "Get list of partners in the contract",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/contract/:contractID/partners",
+            "params": [
+              {
+                "name": "contractID",
+                "value": "",
+                "type": "path",
+                "description": "The unique identifier (UUID) of the contract for which the partners are to be listed"
+              }
+            ]
+          },
+          "docs": "This endpoint retrieves a list of partners associated with a specific contract.\nUse Case: As a Distributor, I want to list all available Partners in a specific contract."
+        },
+        {
+          "info": {
+            "name": "Create partner in the contract",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/partner"
+          },
+          "docs": "This endpoint allows the creation of a new partner within a specific contract. It is designed for distributors to add partners to their contracts efficiently.\nUse Case: As a Distributor, I want to create a new Partner within a specific contract to expand my network and manage my contractual relationships."
+        },
+        {
+          "info": {
+            "name": "Get a partner by identifier",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/partner/:partnerID",
+            "params": [
+              {
+                "name": "partnerID",
+                "value": "",
+                "type": "path",
+                "description": "The unique identifier of the partner to be retrieved"
+              }
+            ]
+          },
+          "docs": "Get a partner by identifier"
+        },
+        {
+          "info": {
+            "name": "Change partner's name or allocation",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/partner/:partnerID",
+            "params": [
+              {
+                "name": "partnerID",
+                "value": "",
+                "type": "path",
+                "description": "The unique identifier (UUID) of the partner whose details are to be updated"
+              }
+            ]
+          },
+          "docs": "This endpoint enables a distributor to update a partner's name or allocated capacity."
+        },
+        {
+          "info": {
+            "name": "Delete a partner",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/partner/:partnerID",
+            "params": [
+              {
+                "name": "partnerID",
+                "value": "",
+                "type": "path",
+                "description": "The unique identifier (UUID) of the partner to be deleted"
+              }
+            ]
+          },
+          "docs": "Deletes an empty partner. Fails if the partner already has storage accounts associated."
+        },
+        {
+          "info": {
+            "name": "Create Management Console user for specific distributor partner",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/partner/:partnerID/member",
+            "params": [
+              {
+                "name": "partnerID",
+                "value": "",
+                "type": "path",
+                "description": "The unique identifier (UUID) of the partner for whom the Management Console user is to be created"
+              }
+            ]
+          },
+          "docs": "This endpoint facilitates the creation of a Management Console user for a specific distributor partner.\nUse Case: As a Distributor, I can create Management Console users (Members) for a specific Partner by its ID,"
+        },
+        {
+          "info": {
+            "name": "Remove Management Console user for a specific distributor partner",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/partner/:partnerID/member/:memberID",
+            "params": [
+              {
+                "name": "partnerID",
+                "value": "",
+                "type": "path",
+                "description": "The unique identifier (UUID) of the partner for whom the Management Console user is to be removed"
+              },
+              {
+                "name": "memberID",
+                "value": "",
+                "type": "path",
+                "description": "The unique identifier (UUID) of the member to be removed"
+              }
+            ]
+          },
+          "docs": "This endpoint facilitates the removal of a Management Console user for a specific distributor partner."
+        },
+        {
+          "info": {
+            "name": "List Management Console users for specific distributor partner",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/partner/:partnerID/members",
+            "params": [
+              {
+                "name": "partnerID",
+                "value": "",
+                "type": "path",
+                "description": "The unique identifier (UUID) of the partner for whom the Management Console users is to be listed"
+              }
+            ]
+          },
+          "docs": "List Management Console users for specific distributor partner"
+        },
+        {
+          "info": {
+            "name": "Get list of available storage accounts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/partner/:partnerID/storage-accounts",
+            "params": [
+              {
+                "name": "partnerID",
+                "value": "",
+                "type": "path",
+                "description": "The unique identifier of the partner"
+              }
+            ]
+          },
+          "docs": "Get list of available storage accounts"
+        },
+        {
+          "info": {
+            "name": "Create a storage account for a partner",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/partner/:partnerID/storage-accounts",
+            "params": [
+              {
+                "name": "partnerID",
+                "value": "",
+                "type": "path",
+                "description": "The unique identifier of the partner"
+              }
+            ]
+          },
+          "docs": "Create a storage account for a partner"
+        },
+        {
+          "info": {
+            "name": "Get account info by accountID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/partner/:partnerID/storage-accounts/:accountID",
+            "params": [
+              {
+                "name": "accountID",
+                "value": "",
+                "type": "path",
+                "description": "Storage Account identifier"
+              },
+              {
+                "name": "partnerID",
+                "value": "",
+                "type": "path",
+                "description": "The unique identifier of the partner"
+              }
+            ]
+          },
+          "docs": "Get account info by accountID"
+        },
+        {
+          "info": {
+            "name": "Update information of an account by accountID",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "{{baseUrl}}/partner/:partnerID/storage-accounts/:accountID",
+            "params": [
+              {
+                "name": "accountID",
+                "value": "",
+                "type": "path",
+                "description": "Storage Account ID you can find in /partner/{partnerID}/storage-account/list"
+              }
+            ]
+          },
+          "docs": "Update information of an account by accountID"
+        },
+        {
+          "info": {
+            "name": "Schedule the deletion of a storage account",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/partner/:partnerID/storage-accounts/:accountID",
+            "params": [
+              {
+                "name": "accountID",
+                "value": "",
+                "type": "path",
+                "description": "Storage account identifier"
+              },
+              {
+                "name": "partnerID",
+                "value": "",
+                "type": "path",
+                "description": "The unique identifier of the partner"
+              }
+            ]
+          },
+          "docs": "By default the storage account will be deleted in 30 days after scheduling."
+        },
+        {
+          "info": {
+            "name": "Retrieves the usage of the storage account of a given distributor partner",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/partner/:partnerID/storage-accounts/:accountID/usage",
+            "params": [
+              {
+                "name": "accountID",
+                "value": "",
+                "type": "path",
+                "description": "Storage Account identifier"
+              },
+              {
+                "name": "partnerID",
+                "value": "",
+                "type": "path",
+                "description": "The unique identifier of the partner"
+              },
+              {
+                "name": "from",
+                "value": "",
+                "type": "query",
+                "description": "Start of the timeframe from where the data should be shown"
+              },
+              {
+                "name": "to",
+                "value": "",
+                "type": "query",
+                "description": "End of the timeframe from where the data should be shown"
+              }
+            ]
+          },
+          "docs": "Retrieves the usage of the storage account of a given distributor partner"
+        },
+        {
+          "info": {
+            "name": "Retrieves the usage of all the storage accounts of a given distributor partner",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/partner/:partnerID/usage",
+            "params": [
+              {
+                "name": "partnerID",
+                "value": "",
+                "type": "path",
+                "description": "The unique identifier (UUID) of the partner for whom the Management Console users is to be listed"
+              },
+              {
+                "name": "from",
+                "value": "",
+                "type": "query",
+                "description": "Start of the timeframe from where the data should be shown"
+              },
+              {
+                "name": "to",
+                "value": "",
+                "type": "query",
+                "description": "End of the timeframe from where the data should be shown"
+              }
+            ]
+          },
+          "docs": "This Endpoint is used to retrieve the usage information of each storage account a specific distributor partner has."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

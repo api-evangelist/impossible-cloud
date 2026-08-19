@@ -1,0 +1,153 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Impossible Cloud Management Console public Distributors Partners API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Partners",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create a storage account",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/storage-account"
+          },
+          "docs": "Create a storage account"
+        },
+        {
+          "info": {
+            "name": "Get list of available storage accounts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/storage-account/list"
+          },
+          "docs": "Get list of available storage accounts"
+        },
+        {
+          "info": {
+            "name": "Get account info by accountID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/storage-account/:accountID",
+            "params": [
+              {
+                "name": "accountID",
+                "value": "",
+                "type": "path",
+                "description": "Storage Account ID you can find in /storage-account/list"
+              }
+            ]
+          },
+          "docs": "Get account info by accountID"
+        },
+        {
+          "info": {
+            "name": "Update information of an account by accountID",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "{{baseUrl}}/storage-account/:accountID",
+            "params": [
+              {
+                "name": "accountID",
+                "value": "",
+                "type": "path",
+                "description": "Storage Account ID you can find in /storage-account/list"
+              }
+            ]
+          },
+          "docs": "Update information of an account by accountID"
+        },
+        {
+          "info": {
+            "name": "Schedule the deletion of a storage account",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/storage-account/:accountID",
+            "params": [
+              {
+                "name": "accountID",
+                "value": "",
+                "type": "path",
+                "description": "Storage Account ID you can find in /storage-account/list"
+              }
+            ]
+          },
+          "docs": "By default the storage account will be deleted in 30 days after scheduling."
+        },
+        {
+          "info": {
+            "name": "Retrieves the usage of the storage account",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/storage-account/:accountID/usage",
+            "params": [
+              {
+                "name": "accountID",
+                "value": "",
+                "type": "path",
+                "description": "Storage Account identifier"
+              },
+              {
+                "name": "from",
+                "value": "",
+                "type": "query",
+                "description": "Start of the timeframe from where the data should be shown"
+              },
+              {
+                "name": "to",
+                "value": "",
+                "type": "query",
+                "description": "End of the timeframe from where the data should be shown"
+              }
+            ]
+          },
+          "docs": "Retrieves the usage of the storage account"
+        },
+        {
+          "info": {
+            "name": "Retrieves the usage of all storage accounts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/storage-accounts/usage",
+            "params": [
+              {
+                "name": "from",
+                "value": "",
+                "type": "query",
+                "description": "Start of the timeframe from where the data should be shown"
+              },
+              {
+                "name": "to",
+                "value": "",
+                "type": "query",
+                "description": "End of the timeframe from where the data should be shown"
+              }
+            ]
+          },
+          "docs": "This Endpoint is used to retrieve the usage information of all storage accounts."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
