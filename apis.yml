@@ -68,6 +68,8 @@ apis:
     https://docs.impossiblecloud.com/partner-portal-help/management-console-api/management-console-api
   baseURL: https://api.partner.impossiblecloud.com/v1
   tags:
+  - Integration
+  tags_raw:
   - Integrations
   properties:
   - type: OpenAPI
