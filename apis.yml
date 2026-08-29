@@ -11,6 +11,18 @@ description: >-
   discovery, and usage/billing reporting. The object storage service is fully AWS
   S3 API compatible, so existing AWS SDKs, the AWS CLI, and S3 tooling work
   against regional endpoints such as https://eu-central-2.storage.impossibleapi.net.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
