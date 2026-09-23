@@ -1,9 +1,7 @@
 {
   "provider": "impossible-cloud",
   "sources": [
-    "impossible-cloud-distributors-api-openapi.yml",
-    "impossible-cloud-integrations-api-openapi.yml",
-    "impossible-cloud-partners-api-openapi.yml"
+    "_original/impossible-cloud-management-console-openapi-original.json"
   ],
   "outputs": [
     "impossible-cloud-distributors-api-openapi.yml",
@@ -13,6 +11,17 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "impossible-cloud-management-console-openapi-original.json: upgraded swagger 2.0 -> OpenAPI 3.2.0",
+    "impossible-cloud-management-console-openapi-original.json: declared missing tag: Distributors",
+    "impossible-cloud-management-console-openapi-original.json: declared missing tag: Integrations",
+    "impossible-cloud-management-console-openapi-original.json: declared missing tag: Partners",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "impossible-cloud-distributors-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "impossible-cloud-integrations-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "impossible-cloud-partners-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
