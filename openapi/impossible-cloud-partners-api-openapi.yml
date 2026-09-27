@@ -196,20 +196,29 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    api.StorageAccountResponse:
+    api.CreateStorageAccountReqBody:
       properties:
         allocatedCapacity:
+          minimum: 0
           type: integer
         allowOverdraft:
           type: boolean
-        clientAccountId:
-          type: string
-        contactEmail:
-          type: string
+        clientAccount:
+          $ref: '#/components/schemas/api.StorageAccountClientAccount'
         name:
           type: string
+      required:
+      - allocatedCapacity
+      - allowOverdraft
+      - clientAccount
+      - name
+      type: object
+    api.PatchStorageAccountReqBody:
+      properties:
         pendingDeletedAt:
-          type: string
+          type:
+          - string
+          - 'null'
       type: object
     api.ClientUsage:
       properties:
@@ -223,13 +232,6 @@ components:
           type: array
         name:
           type: string
-      type: object
-    api.PatchStorageAccountReqBody:
-      properties:
-        pendingDeletedAt:
-          type:
-          - string
-          - 'null'
       type: object
     api.StorageAccountClientAccount:
       properties:
@@ -250,23 +252,6 @@ components:
       - contactEmail
       - password
       type: object
-    api.CreateStorageAccountReqBody:
-      properties:
-        allocatedCapacity:
-          minimum: 0
-          type: integer
-        allowOverdraft:
-          type: boolean
-        clientAccount:
-          $ref: '#/components/schemas/api.StorageAccountClientAccount'
-        name:
-          type: string
-      required:
-      - allocatedCapacity
-      - allowOverdraft
-      - clientAccount
-      - name
-      type: object
     api.DailyUsage:
       properties:
         allocated_capacity:
@@ -275,6 +260,21 @@ components:
           type: string
         usage:
           type: integer
+      type: object
+    api.StorageAccountResponse:
+      properties:
+        allocatedCapacity:
+          type: integer
+        allowOverdraft:
+          type: boolean
+        clientAccountId:
+          type: string
+        contactEmail:
+          type: string
+        name:
+          type: string
+        pendingDeletedAt:
+          type: string
       type: object
   securitySchemes:
     Bearer:
