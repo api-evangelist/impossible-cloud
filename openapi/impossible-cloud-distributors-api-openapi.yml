@@ -470,22 +470,44 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    api.CreateStorageAccountReqBody:
+    api.DistributorPartnerMembersResponse:
+      properties:
+        email:
+          type: string
+        id:
+          type: string
+        name:
+          type: string
+        role:
+          type: string
+      type: object
+    api.ClientUsage:
+      properties:
+        allocated_capacity:
+          type: integer
+        client_id:
+          type: string
+        daily_usage:
+          items:
+            $ref: '#/components/schemas/api.DailyUsage'
+          type: array
+        name:
+          type: string
+      type: object
+    api.StorageAccountResponse:
       properties:
         allocatedCapacity:
-          minimum: 0
           type: integer
         allowOverdraft:
           type: boolean
-        clientAccount:
-          $ref: '#/components/schemas/api.StorageAccountClientAccount'
+        clientAccountId:
+          type: string
+        contactEmail:
+          type: string
         name:
           type: string
-      required:
-      - allocatedCapacity
-      - allowOverdraft
-      - clientAccount
-      - name
+        pendingDeletedAt:
+          type: string
       type: object
     api.CreateMemberReqBody:
       properties:
@@ -505,6 +527,52 @@ components:
       - email
       - password
       - role
+      type: object
+    api.UpdatePartnerReqBody:
+      properties:
+        allocatedCapacity:
+          description: The updated capacity allocated to this partner
+          minimum: 0
+          type: integer
+        name:
+          description: The new name of the partner
+          type: string
+      type: object
+    api.DailyUsage:
+      properties:
+        allocated_capacity:
+          type: integer
+        date:
+          type: string
+        usage:
+          type: integer
+      type: object
+    api.DistributorContractResponse:
+      properties:
+        allocatedCapacity:
+          description: The amount of capacity currently allocated under this contract
+          type: integer
+        costEgressGBCents:
+          description: 'Deprecated: should not be used and is always 0'
+          type: number
+        costStorageGBCents:
+          description: The cost per GB for storage
+          type: number
+        currency:
+          description: The currency in which the costs are denominated
+          type: string
+        details:
+          description: Additional details about the contract
+          type: string
+        distributorId:
+          description: The unique identifier of the distributor for this contract
+          type: string
+        id:
+          description: The unique identifier of the contract
+          type: string
+        reservedCapacity:
+          description: The amount of capacity reserved under this contract
+          type: integer
       type: object
     api.DistributorPartnerResponse:
       properties:
@@ -534,45 +602,22 @@ components:
           - string
           - 'null'
       type: object
-    api.DistributorContractResponse:
+    api.CreateStorageAccountReqBody:
       properties:
         allocatedCapacity:
-          description: The amount of capacity currently allocated under this contract
+          minimum: 0
           type: integer
-        costEgressGBCents:
-          description: 'Deprecated: should not be used and is always 0'
-          type: number
-        costStorageGBCents:
-          description: The cost per GB for storage
-          type: number
-        currency:
-          description: The currency in which the costs are denominated
-          type: string
-        details:
-          description: Additional details about the contract
-          type: string
-        distributorId:
-          description: The unique identifier of the distributor for this contract
-          type: string
-        id:
-          description: The unique identifier of the contract
-          type: string
-        reservedCapacity:
-          description: The amount of capacity reserved under this contract
-          type: integer
-      type: object
-    api.ClientUsage:
-      properties:
-        allocated_capacity:
-          type: integer
-        client_id:
-          type: string
-        daily_usage:
-          items:
-            $ref: '#/components/schemas/api.DailyUsage'
-          type: array
+        allowOverdraft:
+          type: boolean
+        clientAccount:
+          $ref: '#/components/schemas/api.StorageAccountClientAccount'
         name:
           type: string
+      required:
+      - allocatedCapacity
+      - allowOverdraft
+      - clientAccount
+      - name
       type: object
     api.StorageAccountClientAccount:
       properties:
@@ -593,27 +638,6 @@ components:
       - contactEmail
       - password
       type: object
-    api.UpdatePartnerReqBody:
-      properties:
-        allocatedCapacity:
-          description: The updated capacity allocated to this partner
-          minimum: 0
-          type: integer
-        name:
-          description: The new name of the partner
-          type: string
-      type: object
-    api.DistributorPartnerMembersResponse:
-      properties:
-        email:
-          type: string
-        id:
-          type: string
-        name:
-          type: string
-        role:
-          type: string
-      type: object
     api.CreatePartnerReqBody:
       properties:
         allocatedCapacity:
@@ -633,30 +657,6 @@ components:
       - allocatedCapacity
       - distributorContractId
       - name
-      type: object
-    api.DailyUsage:
-      properties:
-        allocated_capacity:
-          type: integer
-        date:
-          type: string
-        usage:
-          type: integer
-      type: object
-    api.StorageAccountResponse:
-      properties:
-        allocatedCapacity:
-          type: integer
-        allowOverdraft:
-          type: boolean
-        clientAccountId:
-          type: string
-        contactEmail:
-          type: string
-        name:
-          type: string
-        pendingDeletedAt:
-          type: string
       type: object
   securitySchemes:
     Bearer:
