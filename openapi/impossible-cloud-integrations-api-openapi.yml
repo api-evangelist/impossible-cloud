@@ -27,13 +27,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    api.ListRegionsResponse:
-      properties:
-        regions:
-          items:
-            $ref: '#/components/schemas/api.Region'
-          type: array
-      type: object
     api.Region:
       properties:
         iam_url:
@@ -44,6 +37,13 @@ components:
           type: string
         sts_url:
           type: string
+      type: object
+    api.ListRegionsResponse:
+      properties:
+        regions:
+          items:
+            $ref: '#/components/schemas/api.Region'
+          type: array
       type: object
   securitySchemes:
     Bearer:
