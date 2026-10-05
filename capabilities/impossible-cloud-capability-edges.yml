@@ -1,0 +1,29 @@
+slug: impossible-cloud
+provider: Impossible Cloud
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 1
+edges:
+- tag: Partners
+  spec_file: impossible-cloud-partners-api-openapi.yml
+  capability_id: BC-4230.10
+  capability_id_l1: BC-4230
+  capability_name: Tenant Provisioning & Lifecycle
+  confidence: 0.7
+  evidence: POST /storage-account 'Create a storage account'; DELETE /storage-account/{accountID} 'Schedule
+    the deletion of a storage account'; GET /storage-account/{accountID}/usage 'Retrieves the usage of
+    the storage account'
+  reason: Partner-facing API for creating, updating, listing and decommissioning customer storage accounts
+    (sub-tenants) on a multi-tenant cloud platform, plus per-account usage retrieval. The create/suspend/delete
+    lifecycle of accounts is tenant provisioning and lifecycle management; the usage endpoints are secondary
+    metering reads. Not mapped to sales/partner-channel capabilities because the operations manipulate
+    service accounts, not partner relationships.
