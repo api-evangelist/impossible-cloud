@@ -1,0 +1,12 @@
+{
+ "url": "https://api.partner.impossiblecloud.com/swagger/doc.json",
+ "requested_url": "https://api.partner.impossiblecloud.com/swagger/doc.json",
+ "status": 200,
+ "content_type": "application/json; charset=utf-8",
+ "bytes": 18477,
+ "sha256": "15cd3f2dd6a06e212b357b284c1d10c2ec0f4e2a93042d1e28ee60f29a489c08",
+ "fetched_at": "2026-10-04",
+ "fetched_by": "APIEvangelist-Harvest/1.0 (+https://apievangelist.com)",
+ "match": "byte-identical",
+ "note": "Re-fetched from the provider by verify-openapi-sources.py; the archived file is byte-identical to what the provider serves."
+}
