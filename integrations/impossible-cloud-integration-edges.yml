@@ -1,4 +1,23 @@
 edges:
+- partner_name: OpenAI
+  partner: openai
+  partner_match: domain
+  type: contract
+  channel: provider-built
+  relationship: compatible
+  direction: provider-built
+  evidence: https://github.com/api-evangelist/impossible-cloud/blob/main/evidence/compatibility/impossible-cloud-aws-s3-1.md#L80
+  contract_reference:
+    repo: impossible-cloud
+    spec_file: impossible-cloud-aws-s3-1.md
+    property: description
+    value: OpenAI-compatible
+    note: 'impossible-cloud declares OpenAI compatibility: ''Open-weight models behind one OpenAI-compatible endpoint.
+      We run the serving stack, you send the requests.'''
+    detected_by: sweep-model-routing.py
+    detected: '2026-10-13'
+  detected_by: sweep-model-routing.py
+  first_seen: '2026-10-13'
 - partner_name: Amazon Web Services
   partner: amazon-web-services
   partner_match: shape-anchor
@@ -16,3 +35,4 @@ edges:
   first_seen: '2026-10-13'
 generated: '2026-10-13'
 method: searched
+checked: []
