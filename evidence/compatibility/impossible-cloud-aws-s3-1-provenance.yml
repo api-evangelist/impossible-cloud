@@ -1,0 +1,12 @@
+fetched: '2026-10-13'
+method: fetched
+source: https://www.impossiblecloud.com/
+page: https://www.impossiblecloud.com/
+file: impossible-cloud-aws-s3-1.md
+bytes: 17885
+sha256: b008019fba2916863458f57c998bc22328cdd7e4bc0e587da5896152f1bc8554
+anchor: amazon-web-services
+shape: aws-s3
+classification: declares-compatibility
+quote: High-performance, S3-compatible cloud storage. Maximum availability. Certified security. Full data control.
+note: text extracted from the provider's own page (tags stripped), saved for evidence
