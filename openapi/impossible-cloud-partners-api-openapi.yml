@@ -196,6 +196,15 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    api.DailyUsage:
+      properties:
+        allocated_capacity:
+          type: integer
+        date:
+          type: string
+        usage:
+          type: integer
+      type: object
     api.PatchStorageAccountReqBody:
       properties:
         pendingDeletedAt:
@@ -233,6 +242,21 @@ components:
       - clientAccount
       - name
       type: object
+    api.StorageAccountResponse:
+      properties:
+        allocatedCapacity:
+          type: integer
+        allowOverdraft:
+          type: boolean
+        clientAccountId:
+          type: string
+        contactEmail:
+          type: string
+        name:
+          type: string
+        pendingDeletedAt:
+          type: string
+      type: object
     api.StorageAccountClientAccount:
       properties:
         contactEmail:
@@ -251,30 +275,6 @@ components:
       required:
       - contactEmail
       - password
-      type: object
-    api.DailyUsage:
-      properties:
-        allocated_capacity:
-          type: integer
-        date:
-          type: string
-        usage:
-          type: integer
-      type: object
-    api.StorageAccountResponse:
-      properties:
-        allocatedCapacity:
-          type: integer
-        allowOverdraft:
-          type: boolean
-        clientAccountId:
-          type: string
-        contactEmail:
-          type: string
-        name:
-          type: string
-        pendingDeletedAt:
-          type: string
       type: object
   securitySchemes:
     Bearer:
