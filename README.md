@@ -64,6 +64,127 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Impossible Cloud is a company surfaced as a portfolio company of hv-capital and added to the API Evangelist network as a stub for enrichment. Sector: resilience-defence; ai-enterprise-software. This profile is a lead awaiting the enrichment pipeline.
+Impossible Cloud is a European sovereign cloud platform headquartered in Hamburg, Germany, providing S3-compatible object storage (11 nines durability, Object Lock/WORM, no egress or API-call fees), bare metal NVIDIA GPU servers, and managed AI services, all GDPR-ready by design and operated under EU jurisdiction with no US CLOUD Act exposure. For partners, distributors, and resellers it exposes the Management Console public API — a RESTful JSON API for automating storage-account provisioning, partner and member management, region discovery, and usage/billing reporting. The object storage service is fully AWS S3 API compatible, so existing AWS SDKs, the AWS CLI, and S3 tooling work against regional endpoints such as https://eu-central-2.storage.impossibleapi.net.
 
-Backed by: hv-capital
+**Areas:** Company · Cloud · Object Storage · S3 · Storage · Infrastructure · GPU · AI Infrastructure · Data Sovereignty · Europe · GDPR · Partner API
+
+## Impossible Cloud on APIs.io
+
+Everything profiled for Impossible Cloud is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/impossible-cloud/](https://apis.io/providers/impossible-cloud/)** — or go straight to one of the APIs or properties below.
+
+### APIs (3)
+
+- [Impossible Cloud Distributors API](https://apis.io/apis/impossible-cloud/impossible-cloud-distributors-api/) — The Distributors API from Impossible Cloud — 11 operation(s) for distributors.
+- [Impossible Cloud Integrations API](https://apis.io/apis/impossible-cloud/impossible-cloud-integrations-api/) — The Integrations API from Impossible Cloud — 1 operation(s) for integrations.
+- [Impossible Cloud Partners API](https://apis.io/apis/impossible-cloud/impossible-cloud-partners-api/) — The Partners API from Impossible Cloud — 5 operation(s) for partners.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [impossible-cloud](https://apis.io/servers/impossible-cloud/impossible-cloud/)
+
+#### Agentic access (1)
+
+Which operations an agent can call, which act, and which need a human in the loop.
+
+- [Impossible Cloud Agentic Access](https://apis.io/agentic-access/impossible-cloud/impossible-cloud-agentic-access/)
+
+#### Collections (3)
+
+Postman and Open Collection request collections.
+
+- [Impossible Cloud Management Console public Distributors API](https://apis.io/collections/impossible-cloud/open-impossible-cloud-distributors-api/)
+- [Impossible Cloud Management Console public Distributors Integrations API](https://apis.io/collections/impossible-cloud/open-impossible-cloud-integrations-api/)
+- [Impossible Cloud Management Console public Distributors Partners API](https://apis.io/collections/impossible-cloud/open-impossible-cloud-partners-api/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Impossible Cloud Management Console Overlay](https://apis.io/overlays/impossible-cloud/impossible-cloud-management-console-overlay/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Impossible Cloud Authentication](https://apis.io/security/impossible-cloud/impossible-cloud-authentication/)
+- [Impossible Cloud Domain Security](https://apis.io/security/impossible-cloud/impossible-cloud-domain-security/)
+- [Impossible Cloud Trust Center](https://apis.io/security/impossible-cloud/impossible-cloud-trust-center/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.impossiblecloud.com/)
+- [Documentation](https://docs.impossiblecloud.com/impossible-cloud-help/)
+- [Getting started](https://docs.impossiblecloud.com/partner-portal-help/management-console-api/management-console-api)
+- [API reference](https://api.partner.impossiblecloud.com/swagger/)
+- [Pricing](https://www.impossiblecloud.com/pricing)
+- [Sign up](https://console.impossiblecloud.com)
+- [Support](https://hs.impossiblecloud.com/en/customer-support)
+- [Blog](https://www.impossiblecloud.com/blog)
+- [Compliance](https://www.impossiblecloud.com/compliance)
+- [Terms of service](https://www.impossiblecloud.com/terms-of-service)
+- [Privacy policy](https://www.impossiblecloud.com/legals-privacy)
+- [GitHub](https://github.com/ImpossibleCloud)
+- [Status](https://status.impossiblecloud.com/)
+
+## API Evangelist rating
+
+**Kin Score 47.3** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 46.9 |
+| Contract governance | 18.2 |
+| Operational transparency | 18.4 |
+| Developer ergonomics | 57.1 |
+| Access clarity | 53.9 |
+
+**Agent readiness 18.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | — |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 29.4** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/impossible-cloud/](https://apis.io/providers/impossible-cloud/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Impossible Cloud: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/impossible-cloud/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
